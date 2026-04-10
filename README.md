@@ -1,4 +1,4 @@
-# 🐳 Flask + MySQL with Docker (Volumes & Network Basics)
+# Flask + MySQL with Docker (Volumes & Network Basics)
 
 This project is a simple **Flask web app connected to a MySQL database**.
 
@@ -6,7 +6,7 @@ Users can submit messages, and those messages are stored in MySQL and displayed 
 
 ---
 
-# 📦 What you need before starting
+# What you need before starting
 
 Make sure you have:
 
@@ -16,7 +16,7 @@ Make sure you have:
 
 ---
 
-# 🚀 Setup (Using Docker Compose – easiest way)
+# Setup (Using Docker Compose – easiest way)
 
 ## 1. Clone the project
 
@@ -104,7 +104,7 @@ docker-compose down
 
 ---
 
-# 🧪 Running without Docker Compose (manual way)
+# Running without Docker Compose (manual way)
 
 ## 1. Build Flask image
 
@@ -153,7 +153,7 @@ docker run -d \
 
 ---
 
-# 🧠 Important Notes (very important)
+# Important Notes (very important)
 
 * Use same network so containers can talk (`mynetwork`)
 * MySQL uses `MYSQL_*` variables for setup
@@ -163,7 +163,7 @@ docker run -d \
 
 ---
 
-# ⚠️ Common mistakes
+# Common mistakes
 
 * Using `localhost` inside containers ❌
 * Username mismatch between MySQL and Flask ❌
@@ -172,7 +172,7 @@ docker run -d \
 
 ---
 
-# 🎯 Simple mental model
+# Simple mental model
 
 * 🐬 MySQL container = database storage
 * 🌐 Flask container = application
