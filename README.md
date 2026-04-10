@@ -12,6 +12,7 @@ Make sure you have:
 
 * Docker installed
 * Git (optional)
+* EC2 Server (optional)
 
 ---
 
@@ -46,12 +47,20 @@ MYSQL_USER=your_username
 MYSQL_PASSWORD=your_password
 MYSQL_DB=your_database
 ```
+For demo we will be using: 
+
+```
+MYSQL_HOST=mysql
+MYSQL_USER=admin
+MYSQL_PASSWORD=admin 
+MYSQL_DB=techwithher_db
+```
 
 👉 These values are used by the Flask app to connect to MySQL.
 
 ---
 
-## 4. Start the application
+## 4. Start the application (if you are using docker compose)
 
 ```bash
 docker-compose up --build
@@ -108,7 +117,7 @@ docker build -t flaskapp .
 ## 2. Create Docker network
 
 ```bash
-docker network create twotier
+docker network create mynetwork
 ```
 
 ---
@@ -119,7 +128,7 @@ docker network create twotier
 docker run -d \
   --name mysql \
   -v mysql-data:/var/lib/mysql \
-  --network=twotier \
+  --network=mynetwork \
   -e MYSQL_DATABASE=mydb \
   -e MYSQL_ROOT_PASSWORD=admin \
   -p 3306:3306 \
@@ -133,7 +142,7 @@ docker run -d \
 ```bash
 docker run -d \
   --name flaskapp \
-  --network=twotier \
+  --network=mynetwork \
   -e MYSQL_HOST=mysql \
   -e MYSQL_USER=root \
   -e MYSQL_PASSWORD=admin \
@@ -146,7 +155,7 @@ docker run -d \
 
 # 🧠 Important Notes (very important)
 
-* Use same network so containers can talk (`twotier`)
+* Use same network so containers can talk (`mynetwork`)
 * MySQL uses `MYSQL_*` variables for setup
 * Flask uses `MYSQL_HOST`, `USER`, `PASSWORD` to connect
 * Always match credentials correctly
@@ -172,9 +181,3 @@ docker run -d \
 
 ---
 
-If you want, I can also convert this into:
-✔ interview notes
-✔ diagram explanation
-✔ or “DevOps cheat sheet version”
-
-Just tell 👍
