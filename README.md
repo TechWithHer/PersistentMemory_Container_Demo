@@ -9,7 +9,7 @@ Users can submit messages, and those messages are stored in MySQL and displayed 
 
 ![Overview](screenshots/ss4.png)
 
-You can also find the detailed video here: 
+You can also find the detailed video below.  
 
 # What you need before starting
 
@@ -186,3 +186,8 @@ docker run -d \
 ## 🎥 Explanation Video
 
 [![Watch the demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
+## 🙌 Inspiration
+
+This project was developed while learning DevOps concepts such as Docker networking, volumes, and multi-container architecture.  
+The learning structure was inspired by [TrainWithShubham ](https://github.com/LondheShubham153)tutorials, and further extended with additional improvements and experimentation.
