@@ -5,6 +5,11 @@ This project is a simple **Flask web app connected to a MySQL database**.
 Users can submit messages, and those messages are stored in MySQL and displayed on the website.
 
 ---
+# Conceptual Understanding 
+
+![Overview](screenshots/ss4.png)
+
+You can also find the detailed video here: 
 
 # What you need before starting
 
@@ -172,12 +177,12 @@ docker run -d \
 
 ---
 
-# Simple mental model
+# Screenshots
 
-* 🐬 MySQL container = database storage
-* 🌐 Flask container = application
-* 🔗 Network = communication bridge
-* 💾 Volume = permanent storage
+![Flask UI](screenshots/ss1.png)
+![Containers](screenshots/ss2.png)
+![Data Reflected in the DB](screenshots/ss3.png)
 
----
+## 🎥 Explanation Video
 
+[![Watch the demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
